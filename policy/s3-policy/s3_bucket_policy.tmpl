@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowRootandHomeListingOfS3Bucket",
+            "Effect": "Allow", 
+            "Principal": {
+                "AWS": ${key_users}
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Resource": ${bucket_resources}
+        },
+        {
+            "Sid": "PutAccess",
+            "Effect": "Allow", 
+            "Principal": {
+                "AWS": ${key_users}
+            },
+            "Action": "s3:PutObject",
+            "Resource": ${bucket_resources}
+        }
+    ]
+}
