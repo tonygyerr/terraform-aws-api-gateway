@@ -143,10 +143,6 @@ variable "aws_region" {
   default     = ""
 }
 
-variable "account_id" {
-  default = ${key_users}
-}
-
 variable "reserved_concurrent_executions" {
   default = "-1"
 }
