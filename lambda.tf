@@ -8,7 +8,7 @@ resource "aws_lambda_function" "this" {
   reserved_concurrent_executions = var.reserved_concurrent_executions
   role                           = var.iam_role_arn
   runtime                        = var.runtime
-  source_code_hash               = var.filename
+  source_code_hash               = filebase64sha256(var.filename)
   tags                           = var.app_tags
   timeout                        = var.timeout
 

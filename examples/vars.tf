@@ -33,10 +33,6 @@ variable "rest_api_id" {
 variable "resource_id" {
 }
 
-variable "lambda_name" {
-  default = ""
-}
-
 variable "account_id" {
   default = ""
 }
