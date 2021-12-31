@@ -17,4 +17,5 @@ module "api_gw" {
   ipset_v6          = var.ipset_v6
   layer_name        = var.layer_name
   statement_id      = var.statement_id
+  vpc_name          = var.vpc_name
   tags              = var.tags

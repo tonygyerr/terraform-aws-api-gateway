@@ -295,3 +295,8 @@ variable "deploy_env_map" {
     prod = "prod"
   }
 }
+
+variable "vpc_name" {
+  type    = string
+  default = ""
+}

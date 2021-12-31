@@ -109,6 +109,11 @@ variable "vpc_config" {
   default     = {}
 }
 
+variable "vpc_name" {
+  type    = string
+  default = ""
+}
+
 variable "iam_role_arn" {
   description = "The IAM Role"
   type        = string
