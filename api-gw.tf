@@ -13,7 +13,7 @@ data "aws_iam_policy_document" "resource-policy" {
     condition {
       test     = "StringEquals"
       variable = "aws:SourceVpc"
-      values   = [data.aws_vpc.computer_vision.id]
+      values   = [data.aws_vpc.api.id]
     }
   }
 }
