@@ -260,3 +260,8 @@ variable "ipset_v6" {
   type    = string
   default = ""
 }
+
+variable "stage" {
+  description = "Stage name"
+  default     = ""
+}

@@ -20,5 +20,6 @@ module "api_gw" {
   layer_name            = var.layer_name
   profile               = var.profile
   vpc_name              = var.vpc_name
+  stage                 = var.stage
   tags                  = var.tags
 }

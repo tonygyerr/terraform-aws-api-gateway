@@ -29,7 +29,7 @@ variable "swagger_template" {
 
 variable "stage" {
   description = "Stage name"
-  default     = "v1"
+  default     = ""
 }
 variable "use_custom_domain" {
   default = false
