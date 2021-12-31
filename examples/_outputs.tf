@@ -2,6 +2,10 @@ output "api_id" {
   value = module.api_gw.api_id
 }
 
+output "execution_arn" {
+  value = module.api_gw.execution_arn
+}
+
 output "lambda_function_name" {
   value = module.api_gw.lambda_function_name
 }
