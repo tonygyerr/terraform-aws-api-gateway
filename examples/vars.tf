@@ -232,3 +232,13 @@ variable "statement_id" {
   type    = string
   default = ""
 }
+
+variable "ipset_v4" {
+  type    = string
+  default = ""
+}
+
+variable "ipset_v6" {
+  type    = string
+  default = ""
+}

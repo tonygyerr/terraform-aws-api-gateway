@@ -185,6 +185,16 @@ variable "security_group_ids" {
   default = ""
 }
 
+variable "ipset_v4" {
+  type    = string
+  default = ""
+}
+
+variable "ipset_v6" {
+  type    = string
+  default = ""
+}
+
 variable "lambda_exec_policy" {
   default = <<EOF
 {

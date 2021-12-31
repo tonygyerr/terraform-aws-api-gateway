@@ -13,6 +13,8 @@ module "api_gw" {
   function_name     = var.function_name
   http_method       = var.http_method
   iam_role_arn      = var.iam_role_arn
+  ipset_v4          = var.ipset_v4
+  ipset_v6          = var.ipset_v6
   layer_name        = var.layer_name
   statement_id      = var.statement_id
   tags              = var.tags
