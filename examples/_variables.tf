@@ -5,9 +5,9 @@ variable "app_name" {
 }
 
 variable "environment" {
-  default = {}
+  type    = string
+  default = ""
 }
-
 variable "profile" {
   description = "The name of the aws profile"
   type        = string
