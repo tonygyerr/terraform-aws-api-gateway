@@ -3,7 +3,7 @@ output "api_id" {
 }
 
 output "execution_arn" {
-  value       = join("", aws_api_gateway_rest_api.this.execution_arn)
+  value = aws_api_gateway_rest_api.this.execution_arn
 }
 
 output "lambda_function_name" {
