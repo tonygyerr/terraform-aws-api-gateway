@@ -5,7 +5,7 @@ data "archive_file" "this" {
 }
 
 module "api_gw" {
-  source            = "git::https://github.com:tonygyerr/terraform-aws-api-gateway.git"
+  source            = "git::https://github.com/tonygyerr/terraform-aws-api-gateway.git"
   api_resource_path = var.api_resource_path
   environment       = var.environment.environment
   cw_event_name     = var.cw_event_name
