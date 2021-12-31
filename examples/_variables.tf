@@ -14,7 +14,6 @@ variable "profile" {
   default     = ""
 }
 
-
 variable "arguments" {
   type    = map(any)
   default = {}
