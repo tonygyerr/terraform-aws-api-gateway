@@ -223,24 +223,24 @@ variable "layer_name" {
 # }
 
 variable "s3_default_resources" {
-  type        = list(string)
-  default     = []
+  type    = list(string)
+  default = []
 }
 
 variable "kms_accounts" {
-  type        = list(string)
-  default     = []
+  type    = list(string)
+  default = []
 }
 
 variable "key_users" {
-  type        = list(string)
-  default     = []
+  type    = list(string)
+  default = []
 }
 
 variable "deploy_env_map" {
-  type = map
+  type = map(any)
   default = {
-    dev = "develop"
+    dev  = "develop"
     test = "test"
     prod = "prod"
   }

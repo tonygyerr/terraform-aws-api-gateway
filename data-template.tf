@@ -1,5 +1,5 @@
 data "template_file" "this" {
-  template = "${file("${path.module}/policy/s3-policy/s3_bucket_policy.tmpl")}"
+  template = file("${path.module}/policy/s3-policy/s3_bucket_policy.tmpl")
 
   vars = {
     api_gateway_name          = jsonencode(var.api_gateway_name),

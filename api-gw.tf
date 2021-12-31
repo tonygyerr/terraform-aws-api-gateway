@@ -23,7 +23,7 @@ resource "aws_api_gateway_rest_api" "this" {
   description = var.api_gateway_description
   policy      = data.aws_iam_policy_document.resource-policy.json
   lifecycle {
-   create_before_destroy = true
+    create_before_destroy = true
   }
 }
 
