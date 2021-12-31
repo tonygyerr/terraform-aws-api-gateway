@@ -143,6 +143,12 @@ variable "aws_region" {
   default     = ""
 }
 
+variable "profile" {
+  description = "The name of the aws profile"
+  type        = string
+  default     = ""
+}
+
 variable "reserved_concurrent_executions" {
   default = "-1"
 }

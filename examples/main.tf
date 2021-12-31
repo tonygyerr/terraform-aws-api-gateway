@@ -7,6 +7,7 @@ data "archive_file" "this" {
 module "api_gw" {
   source            = "git::https://github.com/tonygyerr/terraform-aws-api-gateway.git"
   api_resource_path = var.api_resource_path
+  aws_region        = var.aws_region
   environment       = var.environment
   cw_event_name     = var.cw_event_name
   environment_variables = merge(local.lambda_arguments, var.arguments)
@@ -17,5 +18,6 @@ module "api_gw" {
   ipset_v4          = var.ipset_v4
   ipset_v6          = var.ipset_v6
   layer_name        = var.layer_name
+  profile           = var.profile
   vpc_name          = var.vpc_name
   tags              = var.tags

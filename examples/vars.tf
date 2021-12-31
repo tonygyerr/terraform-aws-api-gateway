@@ -8,6 +8,13 @@ variable "environment" {
   default = {}
 }
 
+variable "profile" {
+  description = "The name of the aws profile"
+  type        = string
+  default     = ""
+}
+
+
 variable "arguments" {
   type    = map(any)
   default = {}
