@@ -8,6 +8,17 @@ variable "environment" {
   default = {}
 }
 
+variable "arguments" {
+  type    = map(any)
+  default = {}
+}
+
+variable "environment_variables" {
+  description = "A map that defines environment variables for the Lambda Function."
+  type        = map(string)
+  default     = {}
+}
+
 variable "rest_api_id" {
   default = ""
 }

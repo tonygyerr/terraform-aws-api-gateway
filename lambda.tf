@@ -13,10 +13,7 @@ resource "aws_lambda_function" "this" {
   timeout                        = var.timeout
 
   environment {
-    variables = {
-      ENV    = var.environment
-      REGION = var.aws_region
-    }
+    variables = var.environment_variables
   }
 
   dynamic "vpc_config" {
@@ -29,7 +26,7 @@ resource "aws_lambda_function" "this" {
 }
 
 resource "aws_lambda_permission" "this" {
-  statement_id  = var.statement_id
+  # statement_id  = var.statement_id
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.this.arn
   principal     = "apigateway.amazonaws.com"
