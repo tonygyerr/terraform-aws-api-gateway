@@ -207,47 +207,55 @@ variable "ipset_v6" {
   default = ""
 }
 
-# variable "lambda_exec_policy" {
-#   default = <<EOF
-# {
-#     "Version": "2012-10-17",
-#     "Statement": [
-#         {
-#             "Effect": "Allow",
-#             "Action": [
-#                 "logs:CreateLogGroup",
-#                 "logs:CreateLogStream",
-#                 "logs:PutLogEvents"
-#             ],
-#             "Resource": [ "arn:aws:logs:*:*:*" ]
-#         },
-#         {
-#             "Effect": "Allow",
-#             "Resource": "*",
-#             "Action": [
-#                 "ec2:DescribeInstances",
-#                 "ec2:CreateNetworkInterface",
-#                 "ec2:AttachNetworkInterface",
-#                 "ec2:DescribeNetworkInterfaces",
-#                 "autoscaling:CompleteLifecycleAction",
-#                 "lambda:InvokeFunction"
-#             ]
-#         },
-#         {
-#             "Effect": "Allow",
-#             "Action": [
-#                 "s3:PutObject",
-#                 "s3:GetObject",
-#                 "s3:PutObject",
-#                 "s3:DeleteObject",
-#                 "s3:ListBucket"
-#             ],
-#             "Resource": [ "arn:aws:s3:::*" ]
-#         }
-#     ]
-# }
-# EOF
-# }
+variable "lambda_exec_policy" {
+  default = <<EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [ "arn:aws:logs:*:*:*" ]
+        },
+        {
+            "Effect": "Allow",
+            "Resource": "*",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:CreateNetworkInterface",
+                "ec2:AttachNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "autoscaling:CompleteLifecycleAction",
+                "lambda:InvokeFunction"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [ "arn:aws:s3:::*" ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sns:Publish",
+                "sqs:SendMessage"
+            ],
+            "Resource": [ "arn:aws:sqs:::*" ]
+        },
+    ]
+}
+EOF
+}
 
 variable "http_method" {
   default = "GET"

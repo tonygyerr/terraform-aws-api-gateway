@@ -195,7 +195,15 @@ variable "lambda_exec_policy" {
                 "s3:ListBucket"
             ],
             "Resource": [ "arn:aws:s3:::*" ]
-        }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sns:Publish",
+                "sqs:SendMessage"
+            ],
+            "Resource": [ "arn:aws:sqs:::*" ]
+        },
     ]
 }
 EOF
