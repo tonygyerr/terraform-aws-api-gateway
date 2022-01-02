@@ -18,6 +18,7 @@ module "api_gw" {
   ipset_v4              = var.ipset_v4
   ipset_v6              = var.ipset_v6
   layer_name            = var.layer_name
+  logging_bucket        = var.logging_bucket
   profile               = var.profile
   vpc_name              = var.vpc_name
   stage                 = var.stage

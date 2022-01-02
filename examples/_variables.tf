@@ -265,3 +265,8 @@ variable "stage" {
   description = "Stage name"
   default     = ""
 }
+
+variable "logging_bucket" {
+  description = ""
+  default     = ""
+}
