@@ -240,6 +240,17 @@ variable "kms_accounts" {
   default = []
 }
 
+variable "kms_master_key_id" {
+  type    = string
+  default = null
+}
+
+variable "dead_letter_arn" {
+  type    = string
+  default = ""
+}
+
+
 variable "key_users" {
   type    = list(string)
   default = []

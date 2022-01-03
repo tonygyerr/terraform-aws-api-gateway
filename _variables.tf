@@ -297,6 +297,16 @@ variable "s3_default_resources" {
   default = []
 }
 
+variable "kms_master_key_id" {
+  type    = string
+  default = null
+}
+
+variable "dead_letter_arn" {
+  type    = string
+  default = ""
+}
+
 variable "kms_accounts" {
   type    = list(string)
   default = []
